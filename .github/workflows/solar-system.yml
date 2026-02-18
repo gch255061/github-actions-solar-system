@@ -32,7 +32,7 @@
             name: Mocha-Test-Result
             path: test-results.xml
 
-    coverage-testing:
+    code-coverage:
       name: code-coverage
       runs-on: ubuntu-latest
       steps:
