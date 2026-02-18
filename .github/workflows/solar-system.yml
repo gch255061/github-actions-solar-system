@@ -62,5 +62,4 @@ jobs:
           with:
             name: Code-Coverage-Result
             path: coverage
-            overwrite: true
             retention-days: 5
