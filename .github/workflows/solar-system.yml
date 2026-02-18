@@ -42,7 +42,7 @@
             node-version: 18
         - name: Install Dependencies
           run: npm install
-        - name: Unit Testing
+        - name: Coverage Testing
           continue-on-error: true
           run: npm run coverage
         - name: Archive Coverage Result
