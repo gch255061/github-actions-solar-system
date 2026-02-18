@@ -33,7 +33,6 @@
             path: test-results.xml
 
     code-coverage:
-      name: code-coverage
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository
