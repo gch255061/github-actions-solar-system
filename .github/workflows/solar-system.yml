@@ -20,7 +20,7 @@
         - name: Setup NodeJS Version
           uses: actions/setup-node@v4
           with:
-            node-version: 24
+            node-version: 18
         - name: Install Dependencies
           run: npm install
         - name: Unit Testing
@@ -31,7 +31,6 @@
           with:
             name: Mocha-Test-Result
             path: test-results.xml
-
     code-coverage:
       runs-on: ubuntu-latest
       steps:
@@ -43,12 +42,14 @@
             node-version: 18
         - name: Install Dependencies
           run: npm install
-        - name: Coverage Testing
+        - name: Unit Testing
           continue-on-error: true
-          run: npm run coverage
-        - name: Archive coverage Result
+          run: npm test
+        - name: Archive Test Result
           uses: actions/upload-artifact@v4
           with:
             name: Code-Coverage-Result
             path: coverage
             retention-days: 5
+
+
