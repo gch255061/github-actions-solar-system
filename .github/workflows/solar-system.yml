@@ -74,8 +74,8 @@ jobs:
             retention-days: 5
     docker:
       runs-on: ubuntu-latest
-      #permissions: 
-      #  packages: write
+      permissions: 
+        packages: write
       steps:
         - name: Checkout tools repo
           uses: actions/checkout@v6
